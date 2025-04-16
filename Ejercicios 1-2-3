@@ -1,0 +1,183 @@
+Practica N1 - HTML
+
+Ejercicio 1
+
+1. Qué es HTML, cuando fue creado, cuáles fueron las distintas versiones y cuál es la última? 
+2. ¿Cuáles son los principios básicos que el W3C recomienda seguir para la creación de documentos con HTML? 
+3. En las Especificaciones de HTML, ¿cuándo un elemento o atributo se considera desaprobado? ¿y obsoleto? 
+4. Qué es el DTD y cuáles son los posibles DTDs contemplados en la especificación de HTML 4.01? 
+5. Qué son los metadatos y cómo se especifican en HTML? 
+
+1. El Lenguaje de marcas de hipertexto, más conocido como HTML, es un lenguaje de marcado para la elaboración de paginas web. Es un estándar que sirve de referencia del software que conecta con la elaboración de páginas web en sus diferentes versiones. Define una estructura básica y un código para la definición de contenido de una página web, como texto, imáge nes, videos, juegos, entre otros.
+Fue desarrollado originalmente por Tim Berners-Lee y fue popularizado por el navegador Mosaic (1993). Cuenta con varias versiones desde su creacion hasta la actualidad:
+HTML 1.0
+HTML 2.0
+HTML 3.0
+HTML 4.0
+XHTML
+HTML5 (verision actual)
+2.El World Wide Web Consortium (W3C) establece cuatro principios fundamentales para garantizar la accesibilidad en documentos HTML: deben ser perceptibles, operables, comprensibles y robustos. Estos principios aseguran que cualquier persona, independientemente de sus capacidades, pueda acceder y utilizar el contenido web.
+
+3. Un elemento o atributo desaprobado en HTML es aquel que ha quedado en desuso debido a la aparición de nuevas estructuras más adecuadas. Aunque aún pueden mencionarse en la documentación, están claramente marcados como desaprobados.
+Por otro lado, los elementos o atributos obsoletos ya no son compatibles ni garantizados por los navegadores. Esto ocurre porque HTML evoluciona constantemente, reemplazando características antiguas por otras más modernas y eficientes.
+
+4. La DTD (Definición de Tipo de Documento) es un conjunto de reglas que establece la estructura y sintaxis de documentos XML o SGML. En HTML 4.01 existen tres tipos de DTD:
+DTD Estricto: para páginas que siguen las normas más actuales y no usan elementos obsoletos.
+DTD Transicional: permite el uso de elementos antiguos en proceso de eliminación.
+DTD de Conjunto de Marcos (Frameset): se utiliza en páginas que emplean marcos.
+
+5.Los metadatos son fragmentos de código HTML que describen el contenido de una página web. Se colocan dentro del elemento <head> del documento y no son visibles para el usuario, pero son esenciales para los motores de búsqueda, navegadores, servidores y robots web.
+Estos datos incluyen información como: Título y descripción de la página, Palabras clave, Autor y derechos de autor, Versión de HTML, Configuración de la ventana gráfica (viewport), Instrucciones para los motores de búsqueda.
+La estructura básica de una etiqueta meta es <meta name="nombre_del_elemento" content="contenido_del_elemento" />
+
+Ejercicio 2
+Analizar  los  siguientes  segmentos  de  código  indicando  en  qué  sección  del  documento  HTML  
+se colocan, cuál es el efecto que producen y señalar cada uno de los elementos, etiquetas, y atributos 
+(nombre y valor), aclarando si es obligatorio. 
+2.a) 
+<!-- Código controlado el día 12/08/2009 → 
+
+Este elemento es un comentario, puede estar presente en cualquier seccion del codigo y no modifican lo que se vera en pantalla.
+
+2.b)  
+<div id="bloque1">Contenido del bloque1</div> 
+
+La etiqueta div se utiliza en el body para separar distintas secciones. El atributo id se usa para darle un identificador que luego permitirá ser referenciado por JS o CSS, su valor es “bloque 1”. El contenido del elemento es “Contenido del bloque1”.
+
+2.c)  
+<img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32" longdesc="detalles.htm" /> 
+
+La etiqueta img se utiliza en el body para poner imagenes (no se cierra porque no tiene conteido). El atributo src indica la ruta donde se encuentra alojada la imagen y su valor es “”. El atributo id se usa para darle un identificador que luego permitirá ser referenciado por JS o CSS, su valor es “im1”. El atributo alt permite darle una descripcion a la imagen dentro de la misma, su valor es “lugar imagen”. El atributo name especifica un nombre para el elemento que puede ser usado para referenciarlo en JS, por un form y otros, el valor también es “im1”. El atributo width modifica el ancho de la imagen a 32 pixeles y el atributo height modifica el alto de esta a 32 pixeles. El atributo longdesc es un vínculo a una descripción más larga de una imagen, que se usa para complementar al atributo alt y toma el valor “detalles.htm”, aunque actualemtente es obsoleto.
+
+2.d) 
+<meta name="keywords" lang="es" content="casa, compra, venta, alquiler " /> 
+<meta http-equiv="expires" content="16-Sep-2019 7:49 PM" /> 
+
+La etiqueta <meta> define metadatos sobre un documento HTML. Siempre va dentro del elemento <head> y normalmente se utiliza para especificar el conjunto de caracteres, la descripción de la página, palabras clave, el autor del documento y la configuración de la ventana gráfica.
+El atributo name especifica un nombre para los metadatos, en este caso es “keywords”; content especifica el valor asociado con el atributo http-equiv o name. En el primer elemento es con el atributo name, en el segundo elemento con el atributo http-equiv. El atributo http-equiv proporciona un encabezado http para la información/valor del atributo contenido, su valor aquí es “expires”.
+Por ultimo el atributo Lang  se encarga de indicar el idioma en el que está escrita una página, su valor es “es”.
+
+2.e) 
+<a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8" rel="help">Resumen HTML </a>
+
+La etiqueta <a> se usa en el body para poner direccionamientos en las paginas. El atributo href contiene la ruta hacia donde queremos dirigirnos, su valor es “http://www.e-style.com.ar/resumen.html". El atributo type se usa para especificar el tipo de elemento, como un campo de texto, un archivo o un script. El atributo hreflang indica al buscador el idioma y region de la pagina. El atributo charset es para especificar la codificación de caracteres que se usará en un documento,  su valor es “utf-8”. El atributo rel define la relación entre un elemento y otro en una página web, aquí el valor es “help”. El contenido del elemento es “Resumen HTML”.
+
+2.f) 
+<table width="200" summary="Datos correspondientes al ejercicio vencido"> 
+  <caption align="top"> Título </caption> 
+  <tr> 
+    <th scope="col">&nbsp;</th> 
+    <th scope="col">A</th> 
+    <th scope="col">B</th> 
+    <th scope="col">C</th> 
+  </tr> 
+  <tr>
+    <th scope="row">1º</th> 
+    <td>&nbsp;</td> 
+    <td>&nbsp;</td> 
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <th scope="row">2º</th> 
+    <td>&nbsp;</td> 
+    <td>&nbsp;</td> 
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+La etiqueta table se utiliza en el body para crear tablas. El atributo width ajusta el ancho de la tabla a 200 pixeles. El atributo summary incluye una descripcion, que toma el valor “Datos correspondientes al ejercicio vencido”, actualmente es obsoleto.
+La etiqueta caption permite conocer el titulo de la tabla, su valor es “Titulo”. El atributo aling modifica la alineacion del texto, su valor es “top”.
+La etiqueta tr define el comienzo y final de una fila de la tabla. 
+La etiqueta th define el comienzo y final del contenido de una celda pero que será encabezado. El atributo scope define si una celda de encabezado aplica a una fila, columna, o grupo de filas o columnas. Este atributo mejora la accesibilidad de las tablas para los usuarios de lectores de pantalla. Los valores que puede tomar son: row El encabezado se aplica a todas las celdas de la fila, col El encabezado se aplica a todas las celdas de la columna, rowgroup El encabezado se aplica a todas las celdas restantes de la fila, colgroup El encabezado se aplica a todas las celdas restantes de la columna.
+La etiqueta td define el comienzo y fin del contenido de una celda.
+
+Ejercicio 3
+3.a) 
+<a href="http://www.google.com.ar">Click aquí para ir a Google</a> 
+Genera un link que al tocarlo te lleva a otra pagina que es la indicada en href. 
+
+<a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a> 
+Genera un link que al tocarlo te lleva a otra pagina que es la indicada en href pero con el atributo target y el valor “_blank” abre la url en otra pestaña. 
+
+<a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help"> 
+Genera un link que al tocarlo te lleva a otra pagina que es la indicada en href. 
+
+<a href="#">Click aquí para ir a Google</a> 
+Genera un enlace al inico de la pagina actual. 
+
+<a href="#arriba">Click aquí para volver arriba</a> 
+Permite generar un link que te lleva a cierta sección de la pagina a través del id sin que la pagina se refresque. 
+
+<a name="arriba" id="arriba"></a>
+Permite generar un link que te lleva a cierta sección de la pagina a través del name sin que la pagina se refresque.
+
+3.b) 
+<p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p> 
+Se muestra una imagen con una descripción y a su lado derecho un enlace que te lleva a una pagina de Google. 
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p> 
+Se muestra una imagen con su descripción que es un enlace que te redirecciona a una pagina de Google y a su derecha el texto “Click aquí”.
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p> 
+Se muestra una imagen con su descripción y el texto click aquí que te redireccionan a una pagina de Google. 
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a href="http://www.google.com.ar">Click aquí</a></p>
+Se muestra una imagen con su descripción que te redirecciona a una pagina de Google y a su lado también hay un enlace que te redirecciona a esa misma pagina.
+
+3.c)
+En la primer columna tenemos una lista no ordenada, la pagina se ve asi:
+• Xxx
+• Yyy
+• Zzz
+En la segunda tenemos una lista ordenada,  la pagina se ve asi:
+1. Xxx
+2. Yyy
+3. Zzz
+En la tercera tenemos tres listas ordenadas y cada una de ellas tiene un elemento pero en la segunda y tercera se indica desde que numero se comienzan a contar los elementos en ellas.  la pagina se ve asi:
+1. Xxx
+
+2. Yyy
+
+3. Zzz
+En la cuarta columna se usa el tag <blockquote> que por lo general es utilizado para secciones de citado. Luego hay un parrafo con varios saltos de linea. La pagina se ve asi:
+  1.Xxx
+  2.Yyy
+  3.Zzz
+
+3.d)
+Ambas tablas se ven igual utilizando diferentes etiquetas. La primera obtiene su formato gracias al encabezado th, mientras que la segunda utiliza el atributo align de la etiqueta div y la etiqueta strong.
+
+3.e)
+Ambas tablas se ven igual debido a que en el ejemlo 1 se usa el tag <caption> que por defecto es en negrita y centrado. En el ejemplo 2 se usa el tag <td> con atributos que permiten que una celda ocupe mas de una columna y centrar el texto. El resto de las filas usan el mismo formato en los dos ejemplos.
+
+3.f)
+En el ejemplo 1 se le agrega el atributo rowspan al tag td que permite que la celda ocupe mas de una en el sentido vertical, en este caso dos celdas de una de dos filas. Luego el resto de las celdas se ingresan de la misma forma. 
+En el ejemplo 2 se usa el atributo colspan con valor 2, por lo tanto una celda ocupa dos celdas horizontalmente.
+
+3.g)
+En las tablas podemos controlar la distancia entra las celdas, y entre el borde de la celda y su contenido. Estos valores los podemos definir con “cellspacing” y “cellpadding” respectivamente.
+El cellspacing permite determinar la distancia entre las celdas y el margen exterior de la tabla. El valor de este atributo se mide en pixeles y es válido para todas las celdas.
+El cellpadding permite especificar la distancia entre el margen interior de la celda y su contenido. Su valor puede ser en pixeles o en porcentaje.
+En el ejemplo 1 como no se le indican los valores se toman esos por defecto, en el ejemplo 2 se les da valor 0 a ambos entonces la tabla se ve sin espacios. 
+
+3.h)
+El atributo action en HTML indica la página a la que se envían los datos de un formulario. Se usa con la etiqueta <form>.
+El atributo method en HTML define cómo se envían los datos de un formulario a un servidor. Los valores más comunes para este atributo son GET (El método predeterminado que envía los datos del formulario como variables URL) y  POST(Envía los datos del formulario como una transacción HTTP POST)
+Con el atributo target y el valor “_blank” abre la url en otra pestaña.
+El elemento fieldset (grupo de campos) permite organizar en grupos los campos de un formulario. Ademas, <fieldset> dibuja un cuadro alrededor de los elementos relacionados.
+El elemento <legend> se utiliza para agregar un título a un grupo de elementos <input> de formulario relacionados que se han agrupado en un <fieldset>.
+
+El primer ejemplo aparece encerrado en un recuadro debido a la etiqueta fieldset y su contraseña está encriptada porque se le dio el valor “password” en el input type. Tiene valores predeterminados asignados. Al darle al boton de tipo “submit” se envian los datos mediante el metodo “post” y se redirecciona a otra pagina gracias al valor del action.
+El segundo ejemplo no tiene recuadro ni valores predeterminados. La contraseña no se incrirpta porque su input type es texto. Al darle al boton de tipo “submit” se envian los datos mediante el metodo “get” y no re redirecciona ya que el valor del action es “”.
+El ultimo ejemplo tambien tiene recuadro y su contraseña encriptada como en el ejemplo 1, pero no tiene valores predeterminados. Al darle al boton de tipo “reset” se resetean los valores y los datos son enviados mediante el metodo “post” junto a la accion mailto.
+
+3.i)
+En el ejemplo 1 se usa el tag <button></button> este es más explícito y legible que <input>, y es más fácil aplicarle estilo en CSS. También es más fácil anidar elementos, por ejemplo, íconos, dentro del botón. 
+Por otro lado, en el ejemplo 2 se usa un tag input con un atributo type. En este caso cumplen la misma función, pero al input no se le pueden agregar foto u otros
+
+3.j)
+En el primer ejemplo se obtienen dos botones con opciones excluyentes debido al valor “radio” del input type, lo que permite seleccionar una opcion de un conjunto predefinido. Las opciones de este caso estan agrupadas con el name “opcion”.
+En el segundo ejemplo pueden seleccionarse varias opciones debido a que no estan agrupadas.
+
+3.k)
+La etiqueta select define una lista desplegable. Al agregan los “[]” al final de su atributo nombre indica que se seleccionara mas de una opcion por lo que se envian los datos como un arreglo.
+En el primer caso solo puede seleccionarse un elemento, a diferencia del segundo donde pueden seleccionarse varios manteniendo ctrl mientras se clickea las opciones gracias al atributo multiple=”multiple” y a los [] en el atributo nombre.
