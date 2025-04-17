@@ -1,0 +1,20 @@
+Ejercicio 1
+1. ¿Ventajas de HTML5? 
+2. ¿Por qué utilizarlo? 
+3. Nombre ventajas 
+
+HTML5 cuenta con varias ventajas para usuarios y desarrolladorespor las que deberia utilizarse, entre ellas:
+  Es gratuito: puede programarse un archivo html incluso desde el block de notas y ser visualizado en un navegador.
+  Codigo mas ordenado: Debido a la adición de nuevas etiquetas que ayudan a nombrar 
+partes de la estructura básica de toda página web.
+  Compatibilidad en navegadores:  Los navegadores modernos y populares como Chrome, Firefox, Safari y Opera soportan HTML5.
+  Almacenamiento mejorado: podria decirse que el almacenamiento local es “mejor que las cookies”   pues la información nunca se transfiere al servidor. De esta manera, la información se mantiene segura. Permite que la información se mantenga almacenada incluso después de haber cerrado el navegador y como funciona desde el lado de cliente, la información se mantiene a salvo incluso si el usuario decide borrar sus cookies.
+  Diseño adaptativo:  HTML5 es compatible con los navegadores móviles, de modo que cada página realizada en HTML5 que se ve en ordenadores, también se puede adaptar a los dispositivos móviles. 
+  Formularios avanzados: nuevos tipos de input y validación.
+  Soporte multimedia: audio y video sin plugins.
+
+Ejercicio 2
+HTML5 admite los formatos de audio MP3, AAC, Ogg Vorbis, WAV,WebM (audio Vorbis/Opus) y otros. Sin embargo, no todos los navegadores son compatibles con todos los formatos.
+
+Ejercicio 3
+HTML5 es compatible con los formatos de video MP4, WebM y Ogg. 
